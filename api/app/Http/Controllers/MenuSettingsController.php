@@ -13,15 +13,8 @@ class MenuSettingsController extends APIController
   }
 
   public function create(){
-    $data = array(
-      'id'      => '6',
-      'module'  => 'primary_menu',
-      'title'   => 'DTR Management',
-      'icon'    => 'fa fa-calendar',
-      'method'  => 'dtr',
-      'rank'    => '4'
-    );
-    $this->model->fill($data);
-    $this->model->save();
+  }
+  public function update(){
+    
   }
 }

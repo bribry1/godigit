@@ -3,9 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class MenuSettings extends Model
 {
+  use SoftDeletes;
   protected $primaryKey = 'id';
   protected $table = 'menu_settings';
   protected $fillable = array(
@@ -15,7 +17,8 @@ class MenuSettings extends Model
       'method',
       'rank'
   );
-  //public $timestamps = false;
+  public $timestamps = true;
+  protected $dates = ['deleted_at'];
   public function menu()
   {
     return $this->belongsTo('\App\MenuSettings');
