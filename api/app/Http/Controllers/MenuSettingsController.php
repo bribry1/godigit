@@ -12,7 +12,7 @@ class MenuSettingsController extends APIController
     $this->model = new MenuSettings();
   }
 
-  public function insert(){
+  public function create(){
     $data = array(
       'id'      => '6',
       'module'  => 'primary_menu',

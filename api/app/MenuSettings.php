@@ -6,11 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class MenuSettings extends Model
 {
-  protected $connection = 'mysql';
-  //protected $primaryKey = 'id';
+  protected $primaryKey = 'id';
   protected $table = 'menu_settings';
   protected $fillable = array(
-      'id',
       'module',
       'title',
       'icon',
